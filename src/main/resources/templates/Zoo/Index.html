@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<p th:text="'Добро пожаловать в новую практическую ' + ${name}" />
+
+<div th:insert="Fragments/Header :: defaultHeader"> </div>
+
+
+
+<form action="/Zoo/Search">
+    <input type="text" name="title">
+    <input type="submit" value="Найти животное по точному названию">
+</form>
+<form action="/Zoo/Searchs">
+    <input type="text" name="title ">
+    <input type="submit" value="Найти животноое ">
+</form>
+
+<div th:each="el : ${zoo}">
+    <h2 th:text="${el.title}"> </h2>
+    <h2 th:text="${el.name}"> </h2>
+    <p th:text="${el.world}"> </p>
+    <a th:href="'/Zoo/' + ${el.id}">посмотреть статью</a>
+</div>
+
+
+<a href="add/" class="btn btn-primary" >Добавить запись</a> <br>
+<a href="/News/" class="btn btn-primary" >перейти к Новостям</a>
+<a href="/Igryshki/" class="btn btn-primary" >перейти к Меню</a>
+</body>
+</html>

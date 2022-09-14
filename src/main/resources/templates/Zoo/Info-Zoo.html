@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<p th:text="'Добро пожаловать в новую практическую ' + ${name}" />
+<div th:insert="Fragments/Header :: defaultHeader"> </div>
+<form action="/Zoo/Search">
+    <input type="text" name="title">
+    <input type="submit" value="Найти новость по точному названию">
+</form>
+<form action="/Zoo/Searchs">
+    <input type="text" name="title ">
+    <input type="submit" value="Найти новость ">
+</form>
+<div th:each="el : ${zoo}">
+    <h2 th:text="${el.title}"> </h2>
+    <h2 th:text="${el.name}"> </h2>
+    <h2 th:text="${el.author}"> </h2>
+    <p th:text="${el.world}"> </p>
+    <p th:text="${el.live}"> </p>
+    <a th:href="'/Zoo/del/' + ${el.id}" class="btn btn-primary">Удалить</a> <br>
+    <a th:href="'/Zoo/edit/' + ${el.id}" class="btn btn-primary">Изменить</a> <br>
+    <a href="/Zoo/" class="btn btn-primary">Назад к новостям</a>
+</div>
+</body>
+</html>

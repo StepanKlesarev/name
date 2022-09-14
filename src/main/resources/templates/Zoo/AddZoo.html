@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body >
+<div th:insert="Fragments/Header :: defaultHeader"> </div>
+<form action="/Zoo/add" method="post">
+
+    <p>Заголовок:</p>
+    <input type="text" id="title" name="title" placeholder="Заголовок">
+    <p>Назваание животного:</p>
+    <input type="text" id="name" name="name" placeholder="Название">
+    <p>Кто обнаружил:</p>
+    <input type="text" id="author" name="author" placeholder="Автор">
+    <p>Сколько их в мире:</p>
+    <input type="number" id="world" name="world" placeholder="Количество в мире">
+    <p>Сколько они живут:</p>
+    <input type="number" id="live" name="live" placeholder="Сколько живут"> <br>
+
+    <input type="submit" value="Добавить новость" class="btn btn-seccsess"/>
+    <a href="/Zoo/"> Назад</a>
+
+
+    </div>
+</form>
+
+</body>
+</html>

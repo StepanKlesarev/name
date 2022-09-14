@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body >
+<div th:insert="Fragments/Header :: defaultHeader"> </div>
+<form action="/Igryshki/add" method="post">
+
+    <p>Заголовок:</p>
+    <input type="text" id="title" name="title" placeholder="Заголовок">
+    <p>Автор:</p>
+    <input type="text" id="author" name="author" placeholder="Автор">
+    <p>Материал:</p>
+    <input type="text" id="material" name="material" placeholder="Материал">
+    <p>Размер:</p>
+    <input type="number" id="size" name="views" placeholder="Размер">
+    <p>Цена:</p>
+    <input type="number" id="price" name="price" placeholder="Цена"> <br>
+
+    <input type="submit" value="Добавить игрушку" class="btn btn-seccsess"/>
+    <a href="/Igryshki/"> Назад</a>
+
+
+    </div>
+</form>
+
+</body>
+</html>
